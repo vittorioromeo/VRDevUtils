@@ -3,7 +3,11 @@
 MAINFOLDER="../.." # This is "OHWorkspace/"
 SCRIPTSFOLDER="../repoScripts" # This is "OHWorkspace/VRDevUtils/repoScripts"
 SCRIPTS=("init-repository.sh" "build-repository.sh") # Consider gathering these with a loop?
-FOLDERS=("SSVEntitySystem" "SSVLuaWrapper" "SSVUtils" "SSVUtilsJson" "SSVJsonCpp" "SSVOpenHexagon" "SSVSCollision" "SSVNewRogue" "SSVMenuSystem" "SSVStart" "SSVRPGSystem") # Consider gathering these with a loop?
+FOLDERS=()
+
+for dir in ${MAINFOLDER}/*; do 
+	FOLDERS+=("${dir}")
+done
 
 for script in ${SCRIPTS[*]}; do
 	for dir in ${FOLDERS[*]}; do 
