@@ -8,5 +8,5 @@ for dir in ${MAINFOLDER}/*; do
 done
 
 for dir in ${FOLDERS[*]}; do 
-	(cd ${dir}; git submodule foreach git pull origin master --recurse-submodules)
+	(cd ${dir}; git submodule foreach git stash; git submodule foreach git pull origin master --recurse-submodules)
 done
