@@ -8,5 +8,5 @@ for dir in ${MAINFOLDER}/*; do
 done
 
 for dir in ${FOLDERS[*]}; do 
-	(cd $dir; gitg &)
+	(cd $dir; git push)
 done
